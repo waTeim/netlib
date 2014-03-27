@@ -1,37 +1,31 @@
-#
-# Be sure to run `pod lib lint NAME.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
 Pod::Spec.new do |s|
-  s.name             = "netlib"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of netlib."
-  s.description      = <<-DESC
-                       An optional longer description of netlib
+  s.name         = "cryptopp"
+  s.version      = "0.11.0"
+  s.summary      = "A collection of open-source libraries for high level network programming."
+  s.description  = <<-DESC
+The project aims to build upon the latest C++ standard (currently C++11) to
+provide easy to use libraries for network programming. We use the latest
+compiler versions and features with an eye on pushing the boundaries on
+leveraging what's available in C++.
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "http://EXAMPLE/NAME"
-  s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license          = 'MIT'
-  s.author           = { "waTeim" => "truthset@gmail.com" }
-  s.source           = { :git => "http://EXAMPLE/NAME.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/NAME'
+Currently the library contains an HTTP client and server implementation, a
+stand-alone URI library, a network message framework, and some concurrency tools.
+                   DESC
+  s.homepage     = "http://cpp-netlib.org/"
+  s.screenshots  = 
+  s.license      = 'BOOST'
+  s.author       = { "waTeim" => "truthset@gmail.com" }
+  s.source       = { :git => "https://github.com/waTeim/netlib.git", :tag => s.version.to_s }
 
-  # s.platform     = :ios, '5.0'
-  # s.ios.deployment_target = '5.0'
-  # s.osx.deployment_target = '10.7'
-  s.requires_arc = true
-
-  s.source_files = 'Classes'
-  s.resources = 'Assets/*.png'
-
-  s.ios.exclude_files = 'Classes/osx'
-  s.osx.exclude_files = 'Classes/ios'
-  # s.public_header_files = 'Classes/**/*.h'
-  # s.frameworks = 'SomeFramework', 'AnotherFramework'
-  # s.dependency 'JSONKit', '~> 1.4'
+  s.platform     = :osx, '10.6'
+  s.requires_arc = false
+  s.vendored_libraries = 'lib/*.a'
+  s.source_files = s.public_header_files = 
+    'include/**/*.{hpp,ipp}',
+    'include/**/**/*.{hpp,ipp}',
+    'include/**/**/**/*.{hpp,ipp}',
+    'include/**/**/**/**/*.{hpp,ipp}',
+    'include/**/**/**/**/**/*.{hpp,ipp}',
+    'include/**/**/**/**/**/**/*.{hpp,ipp}',
+  s.header_mappings_dir = 'include'
 end
