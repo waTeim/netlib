@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "cryptopp"
+  s.name         = "netlib"
   s.version      = "0.11.0"
   s.summary      = "A collection of open-source libraries for high level network programming."
   s.description  = <<-DESC
