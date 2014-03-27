@@ -1,0 +1,7 @@
+pod "netlib", :path => "../netlib.podspec"
+
+target "Demo" do
+end
+
+target "DemoTests" do
+end
